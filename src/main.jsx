@@ -6,6 +6,7 @@ import Root from './Component/Root/Root.jsx'
 import Dashboard from './Component/Dashboard/Dashboard.jsx'
 import Counter from './Component/Counter/Counter.jsx'
 import Home from './Component/Home/Home.jsx'
+import Jobs from './Component/Jobs/Jobs.jsx'
 
 const router = createBrowserRouter([
   { path: '/', Component: Root },
@@ -14,7 +15,7 @@ const router = createBrowserRouter([
     Component: Dashboard,
     children: [
       { index: true, Component: Home },
-      { path: 'counter', Component: Counter },
+      { path: 'jobs', Component: Jobs}
     ],
   },
 ])

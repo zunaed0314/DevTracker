@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Counter = () => {
+const Jobs = () => {
     return (
         <div>
-            
+            <h1>This is jobs</h1>
         </div>
     );
 };
 
-export default Counter;
+export default Jobs;

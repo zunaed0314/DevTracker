@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import useInputField from "../../Hook/useInputField";
 import { useNavigate } from "react-router";
 import { Eye, EyeOff } from "lucide-react";
@@ -8,6 +8,11 @@ const Root = () => {
   const [password, passwordOnChange] = useInputField("");
   const [error, setError] = useState("");
   const [eyeOpen, setEyeOpen] = useState(false);
+  const emailRef = useRef();
+
+  useEffect(() => {
+    emailRef.current?.focus()
+  }, []);
 
   const navigate = useNavigate();
 
@@ -35,6 +40,7 @@ const Root = () => {
                 <label className="label">Email</label>
                 <input
                     type="email"
+                    ref={emailRef}
                     value={email}
                     onChange={emailOnChange}
                     className="input focus:outline-1 focus:outline-offset-0"
